@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+    padding-top: 56px; /* Height of navbar */
 }
 
 /* Header styles */
@@ -111,5 +112,64 @@ body {
         flex-direction: row;
         justify-content: center;
         gap: 1rem;
+    }
+}
+
+/* Custom styles to complement Bootstrap */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --transition-speed: 0.3s;
+}
+
+/* Custom animations */
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom button styles */
+.btn-outline-primary {
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-outline-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom navbar styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 500;
+}
+
+/* Custom section styles */
+section {
+    padding: 80px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
     }
 } 
